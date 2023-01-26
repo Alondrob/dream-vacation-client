@@ -1,22 +1,22 @@
 export const apiRoutes = {
   property: {
-    getAllProperties: () => "http://localhost:3001/property",
-    getPropertyById: (id) => `http://localhost:3001/property/${id}`,
-    createPropertyRoute: () => "http://localhost:3001/property/create-property",
-    editPropertyRoute: () => "http://localhost:3001/property/edit-property",
-    deletePropertyRoute: (id) => `http://localhost:3001/property/delete-property/${id}`,
-    uploadImagesRoute: () => "http://localhost:3001/property/images"
+    getAllProperties: () => `${process.env.REACT_APP_API_URL}/property`,
+    getPropertyById: (id) => `${process.env.REACT_APP_API_URL}/property/${id}`,
+    createPropertyRoute: () => `${process.env.REACT_APP_API_URL}/property/create-property`,
+    editPropertyRoute: () => `${process.env.REACT_APP_API_URL}/property/edit-property`,
+    deletePropertyRoute: (id) => `${process.env.REACT_APP_API_URL}/property/delete-property/${id}`,
+    uploadImagesRoute: () => `${process.env.REACT_APP_API_URL}/property/images`
     
   },
   user: {
-    createUserRoute: () => "http://localhost:3001/user/create-user",
-    loginUserRoute: () => "http://localhost:3001/user/login-user",
-    getUserProperties: (id) => `http://localhost:3001/user/${id}/properties`,
-    getUserBookingsRoute: () => `http://localhost:3001/user/bookings`,
-    bookPropertyRoute: () => "http://localhost:3001/property/book-property",
-    deleteBookingRoute: () => "http://localhost:3001/user/delete-booking",
-    getUserBookings: () => "http://localhost:3001/user/get-user-bookings",
-    editUserRoute: (id) => `http://localhost:3001/user/edit-user/${id}`,
-    deleteUserRoute: (id) => `http://localhost:3001/user/delete-user/${id}`,
+    createUserRoute: () => `${process.env.REACT_APP_API_URL}/user/create-user`,
+    loginUserRoute: () => `${process.env.REACT_APP_API_URL}/user/login-user`,
+    getUserProperties: (id) => `${process.env.REACT_APP_API_URL}/user/${id}/properties`,
+    getUserBookingsRoute: () => `${process.env.REACT_APP_API_URL}/user/bookings`,
+    bookPropertyRoute: () => `${process.env.REACT_APP_API_URL}/property/book-property`,
+    deleteBookingRoute: () => `${process.env.REACT_APP_API_URL}/user/delete-booking`,
+    getUserBookings: () => `${process.env.REACT_APP_API_URL}/user/get-user-bookings`,
+    editUserRoute: (id) => `${process.env.REACT_APP_API_URL}/user/edit-user/${id}`,
+    deleteUserRoute: (id) => `${process.env.REACT_APP_API_URL}/user/delete-user/${id}`,
   },
 };
